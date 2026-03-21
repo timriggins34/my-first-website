@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | R G International</title>
+    <meta name="description" content="abc">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+    <!-- Loads your persistent navigation bar -->
+    <script src="navbar.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <main-navbar></main-navbar>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-blue-800 text-white py-16 px-4 text-center border-b-8 border-blue-600">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h1>
+        <p class="text-lg text-blue-200 max-w-2xl mx-auto">Don't just take our word for it. Hear from the businesses we help navigate global trade every day.</p>
+    </section>
+
+    <!-- TESTIMONIALS GRID -->
+    <section class="py-16 px-4 max-w-7xl mx-auto flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 relative h-full flex flex-col">
+                <svg class="w-12 h-12 text-blue-100 absolute top-6 left-6 -z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <div class="z-10 relative flex-grow">
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"R G International completely transformed our import process. Their expertise in SVB registration and customs clearance saved us countless hours and significantly reduced our holding costs at Mundhra Port."</p>
+                </div>
+                <div class="flex items-center mt-auto border-t border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">S</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Sanjay M.</h4>
+                        <p class="text-sm text-slate-500">Director, AutoParts India Ltd.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 relative h-full flex flex-col">
+                <svg class="w-12 h-12 text-blue-100 absolute top-6 left-6 -z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <div class="z-10 relative flex-grow">
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"As a textile exporter, hitting our shipment deadlines is critical. The team at R G International handles our Air Freight and EPCG licences flawlessly. They are more than a vendor; they are a vital logistics partner."</p>
+                </div>
+                <div class="flex items-center mt-auto border-t border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">A</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Anita D.</h4>
+                        <p class="text-sm text-slate-500">VP Operations, Global Textiles</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100 relative h-full flex flex-col">
+                <svg class="w-12 h-12 text-blue-100 absolute top-6 left-6 -z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <div class="z-10 relative flex-grow">
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"We relied on them for getting our AEO certification and setting up our MOOWR scheme. The consultants are incredibly knowledgeable about DGFT regulations and made a complex process seem easy from start to finish."</p>
+                </div>
+                <div class="flex items-center mt-auto border-t border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">R</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Rahul K.</h4>
+                        <p class="text-sm text-slate-500">CFO, TechMachinery Innovations</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <main-footer></main-footer>
+</body>
+</html>

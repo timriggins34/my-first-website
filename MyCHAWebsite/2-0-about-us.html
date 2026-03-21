@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | R G International</title>
+    <meta name="description" content="Learn about R G International, a trusted logistics partner and Customs House Agent (CHA) providing reliable cargo movement, customs clearance, and compliance services in India.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        html { scroll-behavior: smooth; } /* Makes jumping to sections look nice */
+    </style>
+    <!-- THIS IS NEW: It loads your navigation bar code -->
+    <script src="navbar.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- THIS IS NEW: This one tag replaces the entire 50+ lines of header code! -->
+    <main-navbar></main-navbar>
+
+    <!-- ==============================
+         PAGE HEADER
+         ============================== -->
+    <section class="bg-blue-800 text-white py-16 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">About R G International</h1>
+        <p class="text-lg text-blue-200 max-w-2xl mx-auto">Decades of trust, compliance, and excellence in the Indian logistics and customs sector.</p>
+    </section>
+
+    <!-- ==============================
+         WHO WE ARE SECTION
+         ============================== -->
+    <section id="who-we-are" class="py-16 px-4 max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="R G International warehouse and logistics operations handling Indian customs clearance" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">Who We Are</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    Founded with a commitment to integrity and speed, R G International is a premier Customs House Agent and freight forwarding company. We specialize in navigating the complex regulatory environment of Indian customs.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Our team of licensed experts takes the friction out of international trade, ensuring your shipments are cleared safely, legally, and on time. From consulting on DGFT licenses to executing on-ground cargo movement, we are your single-window logistics partner.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         MISSION & VISION SECTION
+         ============================== -->
+    <section id="mission" class="bg-slate-100 py-16 px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow border border-slate-200 border-t-4 border-t-blue-600">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Our Mission</h3>
+                <p class="text-slate-600">
+                    To provide seamless, transparent, and compliant customs clearance and logistics solutions. We strive to eliminate supply chain bottlenecks for our clients through deep regulatory knowledge and relentless dedication to service.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow border border-slate-200 border-t-4 border-t-blue-400">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">Our Vision</h3>
+                <p class="text-slate-600">
+                    To be the most trusted and technologically advanced logistics partner in India, empowering businesses of all sizes to participate in global trade with absolute confidence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         OUR CLIENTS SECTION
+         ============================== -->
+    <section id="clients" class="py-16 px-4 max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-800 mb-6">Industries We Serve</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto mb-12">
+            R G International proudly serves a diverse portfolio of clients. While client confidentiality is our top priority, our expertise spans across several major sectors:
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="font-bold text-blue-800 mb-2">Textiles & Garments</div>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="font-bold text-blue-800 mb-2">Automotive Parts</div>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="font-bold text-blue-800 mb-2">Pharmaceuticals</div>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="font-bold text-blue-800 mb-2">Machinery & Tech</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+    <main-footer></main-footer>
+
+</body>
+</html>

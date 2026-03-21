@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | R G International</title>
+    <meta name="description" content="Visualizing R G International's logistics, warehousing, and customs operations in action across India.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        /* Smooth fade-in for the lightbox */
+        #lightbox { transition: opacity 0.3s ease; }
+    </style>
+    <script src="navbar.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <main-navbar></main-navbar>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-blue-800 text-white py-16 px-4 text-center border-b-8 border-blue-600">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Gallery</h1>
+        <p class="text-lg text-blue-200 max-w-2xl mx-auto">Visualizing our logistics, warehousing, and customs operations in action.</p>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="py-16 px-4 max-w-7xl mx-auto flex-grow">
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <span class="px-6 py-2 bg-blue-600 text-white rounded-full font-semibold text-sm cursor-pointer shadow">All</span>
+            <span class="px-6 py-2 bg-white text-slate-600 hover:bg-blue-50 border border-slate-200 rounded-full font-semibold text-sm cursor-pointer transition">Customs Operations</span>
+            <span class="px-6 py-2 bg-white text-slate-600 hover:bg-blue-50 border border-slate-200 rounded-full font-semibold text-sm cursor-pointer transition">Warehousing</span>
+            <span class="px-6 py-2 bg-white text-slate-600 hover:bg-blue-50 border border-slate-200 rounded-full font-semibold text-sm cursor-pointer transition">Freight Forwarding</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            
+            <!-- Image 1 -->
+            <div class="relative group overflow-hidden rounded-xl shadow-md cursor-pointer h-64" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Container Yard" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition duration-300 translate-y-4 group-hover:translate-y-0">Mundhra Port Operations</h3>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="relative group overflow-hidden rounded-xl shadow-md cursor-pointer h-64" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop" alt="Customs Paperwork" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition duration-300 translate-y-4 group-hover:translate-y-0">Document Processing</h3>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="relative group overflow-hidden rounded-xl shadow-md cursor-pointer h-64" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="Warehouse Storage" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition duration-300 translate-y-4 group-hover:translate-y-0">Bonded Warehousing</h3>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="relative group overflow-hidden rounded-xl shadow-md cursor-pointer h-64" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop" alt="Cargo Ship at Sea" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition duration-300 translate-y-4 group-hover:translate-y-0">Ocean Freight Solutions</h3>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="relative group overflow-hidden rounded-xl shadow-md cursor-pointer h-64" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop" alt="Transport Trucks" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition duration-300 translate-y-4 group-hover:translate-y-0">Domestic Logistics Network</h3>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="relative group overflow-hidden rounded-xl shadow-md cursor-pointer h-64" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop" alt="Airplane Cargo" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition duration-300 translate-y-4 group-hover:translate-y-0">Air Freight Clearance</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW: FULLSCREEN LIGHTBOX OVERLAY -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black bg-opacity-90 hidden flex-col items-center justify-center p-4">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-8 text-white hover:text-blue-400 focus:outline-none">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <!-- Large Image Placeholder -->
+        <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-full max-h-[85vh] rounded shadow-2xl">
+        <!-- Caption Placeholder -->
+        <p id="lightbox-caption" class="text-white text-xl mt-6 font-semibold"></p>
+    </div>
+
+    <!-- Javascript to control the Lightbox -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        // Function triggered when an image card is clicked
+        function openLightbox(element) {
+            // Find the image and caption inside the clicked element
+            const imgEl = element.querySelector('img');
+            const captionEl = element.querySelector('h3');
+            
+            // Set the lightbox image source and text
+            lightboxImg.src = imgEl.src;
+            lightboxCaption.textContent = captionEl.textContent;
+            
+            // Show the lightbox
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        // Function triggered when the close button or background is clicked
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxImg.src = ""; // Clear source
+        }
+
+        // Close lightbox if user clicks anywhere outside the actual image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) { closeLightbox(); }
+        });
+    </script>
+
+    <!-- FOOTER -->
+    <main-footer></main-footer>
+</body>
+</html>
