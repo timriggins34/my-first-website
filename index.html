@@ -11,22 +11,45 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .dropdown:hover .dropdown-menu { display: block; }
+        
+        /* INFINITE SCROLL CAROUSEL ANIMATION */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            /* Shifts the entire track left by exactly half its width to loop seamlessly */
+            100% { transform: translateX(-50%); } 
+        }
+        .animate-scroll {
+            /* 30 seconds for a slow, smooth scroll. Adjust time to make it faster/slower */
+            animation: scroll 30s linear infinite; 
+        }
+        /* Pauses the carousel if a user hovers their mouse over it */
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
     </style>
     <script src="navbar.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
     <main-navbar></main-navbar>
 
+    <!-- ==============================
+         HERO SECTION
+         ============================== -->
     <section class="relative bg-slate-800 text-white py-32 px-4 text-center border-b-8 border-blue-600 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         <div class="relative z-10 max-w-4xl mx-auto">
-            <!-- I wrapped 'Local Expertise' in a span tag to give it a bright blue color -->
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Navigating Global Trade with <span class="text-blue-400">Local Expertise</span></h1>
             <p class="text-lg md:text-xl text-slate-200 mb-10">Your trusted Customs House Agent for seamless clearance, licensing, and end-to-end freight forwarding in Rajasthan and beyond.</p>
-            <div class="space-x-4">
-                <a href="8-0-contact-us.html" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-md font-bold text-lg shadow-lg transition">Get a Quote</a>
-                <a href="3-0-services.html" class="bg-transparent border border-white hover:bg-white hover:text-slate-800 px-8 py-3 rounded-md font-bold text-lg transition">Our Services</a>
+            <div class="space-x-4 flex justify-center mt-8">
+                <!-- Upgraded Glow & Scale effect on primary button -->
+                <a href="8-0-contact-us.html" class="bg-blue-600 text-white px-8 py-3 rounded-md font-bold text-lg shadow-lg hover:bg-blue-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-all duration-300">
+                    Get a Quote
+                </a>
+                <!-- Upgraded subtle scale and background fade on secondary button -->
+                <a href="3-0-services.html" class="bg-transparent text-white border-2 border-white px-8 py-3 rounded-md font-bold text-lg hover:bg-white hover:text-slate-900 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                    Our Services
+                </a>
             </div>
         </div>
     </section>
@@ -63,6 +86,43 @@
                 <h3 class="text-xl font-bold mb-3">Licences & Certifications</h3>
                 <p class="text-slate-600 mb-4">Expert consultancy for obtaining essential trade licenses, SVB registrations, and compliance certifications.</p>
                 <a href="3-3-certifications.html" class="text-blue-600 font-semibold hover:underline">Learn more &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         CLIENT LOGO CAROUSEL
+         ============================== -->
+    <section class="py-12 bg-white border-y border-slate-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-center text-slate-500 font-semibold text-sm tracking-widest uppercase mb-8">Trusted by industry leaders across India</h2>
+            
+            <div class="relative w-full">
+                <!-- White gradient overlays to create a "fade-in/fade-out" effect on the edges -->
+                <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                
+                <!-- The scrolling track -->
+                <!-- We duplicate the set of logos so it loops seamlessly without a blank space -->
+                <div class="flex w-max animate-scroll items-center gap-12 md:gap-20">
+                    
+                    <!-- SET 1 (Original) -->
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">Global Tech</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">AutoCorp</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">PharmaPlus</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">Vast Textiles</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">Machinery Ltd</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">BuildRight</div>
+
+                    <!-- SET 2 (Duplicate for seamless looping) -->
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">Global Tech</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">AutoCorp</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">PharmaPlus</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">Vast Textiles</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">Machinery Ltd</div>
+                    <div class="w-40 h-20 flex items-center justify-center bg-slate-50 border border-slate-100 rounded-lg text-slate-400 font-bold text-xl hover:text-blue-600 hover:border-blue-300 transition duration-300">BuildRight</div>
+
+                </div>
             </div>
         </div>
     </section>
