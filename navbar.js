@@ -2,9 +2,12 @@
 const navTemplate = `
 <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-wider">
-            <span class="text-blue-300">R G</span> INTERNATIONAL
-        </div>
+        
+        <!-- CLICKABLE LOGO & NAME -->
+        <a href="/RGI/" class="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+            <img src="/RGI/Logo.png" alt="R G International Logo" class="h-10 md:h-12 w-auto object-contain">
+            <img src="/RGI/Name.png" alt="R G International" class="h-6 md:h-8 w-auto object-contain">
+        </a>
 
         <!-- Hamburger Button for Mobile -->
         <button id="mobile-menu-btn" class="md:hidden text-blue-300 hover:text-white focus:outline-none">
