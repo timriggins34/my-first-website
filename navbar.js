@@ -37,16 +37,21 @@ const navTemplate = `
                     <a href="/RGI/Services/logistics#freight" class="block px-4 py-1 pl-8 hover:bg-blue-50 hover:text-blue-700 text-sm">- Freight (Air/Ocean)</a>
                     <a href="/RGI/Services/logistics#domestic" class="block px-4 py-1 pl-8 hover:bg-blue-50 hover:text-blue-700 text-sm">- Domestic</a>
                     
+                    <!-- EXPANDED CERTIFICATIONS FLYOUT -->
                     <div class="group/cert relative mt-1">
                         <a href="/RGI/Services/Certifications/certifications" class="flex justify-between items-center px-4 py-2 hover:bg-blue-50 hover:text-blue-700 font-bold">
                             Certifications & Licences
                             <span class="text-slate-400 text-xs">▶</span>
                         </a>
                         <div class="absolute top-0 left-full hidden group-hover/cert:block bg-white text-slate-800 shadow-xl rounded py-2 w-64 border border-slate-200 -ml-1">
+                            <a href="/RGI/Services/Certifications/epcg-licences" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">EPCG / Advance Licences</a>
+                            <a href="/RGI/Services/Certifications/epr-certification" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">EPR Certification</a>
                             <a href="/RGI/Services/Certifications/aeo-certification" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">AEO Certification</a>
                             <a href="/RGI/Services/Certifications/svb-registration" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">SVB Registration</a>
-                            <a href="/RGI/Services/Certifications/epcg-licences" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">EPCG / Advance Licences</a>
                             <a href="/RGI/Services/Certifications/moowr-scheme" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">MOOWR Scheme</a>
+                            <a href="/RGI/Services/Certifications/self-sealing-permission" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm">Self-Sealing Permission</a>
+                            <div class="border-t border-slate-100 my-1"></div>
+                            <a href="/RGI/Services/Certifications/other-certifications" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700 text-sm font-semibold">Other Certifications</a>
                         </div>
                     </div>
                 </div>
