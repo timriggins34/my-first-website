@@ -120,12 +120,70 @@ const globalHeadTags = `
 `;
 document.head.insertAdjacentHTML('beforeend', globalHeadTags);
 
-// 2. GLOBAL FOOTER COMPONENT
+// 2. GLOBAL EXPANDED FOOTER COMPONENT
 const footerTemplate = `
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center mt-auto w-full">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2026 R G International. All rights reserved.</p>
-            <p class="text-sm mt-2">Customs House Agent | Freight Forwarding | Licensing</p>
+    <footer class="bg-slate-900 text-slate-300 mt-auto w-full border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Column 1: Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="/RGI/Logo.png" alt="R G International Logo" class="h-8 w-auto object-contain bg-white rounded p-1">
+                        <span class="text-xl font-bold text-white tracking-wider"><span class="text-blue-400">R G</span> INTERNATIONAL</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                        Your trusted Customs House Agent and logistics partner for seamless global trade, regulatory compliance, and end-to-end freight forwarding.
+                    </p>
+                    <div class="space-y-3 text-sm text-slate-400">
+                        <p class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> 
+                            <span>123 Logistics Park, C-Scheme,<br>Jaipur, Rajasthan 302001</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> 
+                            <a href="mailto:info@rginternational.com" class="hover:text-blue-400 transition">info@rginternational.com</a>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> 
+                            <span>+91 (141) 123-4567</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="md:pl-8">
+                    <h3 class="text-white font-bold text-lg mb-6 border-b border-slate-700 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/RGI/" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> Home</a></li>
+                        <li><a href="/RGI/About/about-us" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> About Us</a></li>
+                        <li><a href="/RGI/Services/services" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> All Services</a></li>
+                        <li><a href="/RGI/Network/network" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> Our Network</a></li>
+                        <li><a href="/RGI/Consultancy/consultancy" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> Consultancy (BCG)</a></li>
+                        <li><a href="/RGI/Contact/contact-us" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Core Expertise -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 border-b border-slate-700 pb-2 inline-block">Core Expertise</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/RGI/Services/customs-clearance" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> Customs Clearance</a></li>
+                        <li><a href="/RGI/Services/logistics" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> Freight & Logistics</a></li>
+                        <li><a href="/RGI/Services/Certifications/certifications" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> DGFT Certifications</a></li>
+                        <li><a href="/RGI/Services/Certifications/aeo-certification" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> AEO Certification</a></li>
+                        <li><a href="/RGI/Services/Certifications/svb-registration" class="hover:text-blue-400 transition flex items-center gap-2"><span class="text-blue-600">▸</span> SVB Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Copyright Bar -->
+        <div class="bg-slate-950 py-4 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 R G International. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Customs House Agent | Freight Forwarding | Regulatory Compliance</p>
+            </div>
         </div>
     </footer>
 `;
