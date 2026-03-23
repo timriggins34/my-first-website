@@ -9,6 +9,8 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .dropdown:hover .dropdown-menu { display: block; }
+        /* Smooth scroll for map interactions */
+        html { scroll-behavior: smooth; }
     </style>
     <!-- Loads your persistent global components -->
     <script src="/RGI/navbar.js"></script>
@@ -23,7 +25,7 @@
         <p class="text-lg text-blue-200 max-w-2xl mx-auto">Strategic offices and operational hubs positioned to ensure seamless ground-level logistics across India.</p>
     </section>
 
-    <!-- MAP SECTION -->
+    <!-- MAP OVERVIEW SECTION -->
     <section class="py-16 px-4 max-w-6xl mx-auto">
         <div class="bg-slate-900 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center border border-slate-700">
             
@@ -56,7 +58,6 @@
                         <!-- Label -->
                         <div class="absolute top-7 bg-white text-slate-800 text-xs font-bold px-3 py-1.5 rounded-md shadow-xl whitespace-nowrap text-center z-20">
                             Jaipur (H.O.)<br><span class="font-normal text-[10px] text-slate-500">ICDs & Air Cargo</span>
-                            <!-- Tooltip Arrow -->
                             <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rotate-45"></div>
                         </div>
                     </div>
@@ -70,7 +71,6 @@
                         <!-- Label -->
                         <div class="absolute top-7 bg-white text-slate-800 text-xs font-bold px-3 py-1.5 rounded-md shadow-xl whitespace-nowrap text-center z-20">
                             Gujarat Presence<br><span class="font-normal text-[10px] text-slate-500">Gandhidham & Mundra</span>
-                            <!-- Tooltip Arrow -->
                             <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rotate-45"></div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
     </section>
 
     <!-- LOCATIONS CATEGORY GRID -->
-    <section class="py-12 px-4 max-w-7xl mx-auto flex-grow mb-12">
+    <section class="py-12 px-4 max-w-7xl mx-auto mb-4">
         <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Operational Directory</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -98,17 +98,17 @@
                     <ul class="space-y-6">
                         <li class="flex flex-col border-b border-slate-100 pb-4">
                             <span class="text-blue-600 font-bold text-sm uppercase tracking-wider mb-1">Head Office</span>
-                            <a href="https://maps.app.goo.gl/9imtaF8yVLEym42R6" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold text-lg hover:text-blue-600 transition flex items-center gap-2 w-fit">
-                                Jaipur, Rajasthan
-                                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="#map-viewer-section" onclick="updateMap(event, this)" data-title="Jaipur, Rajasthan (Head Office)" data-embed="https://maps.google.com/maps?q=Jaipur,+Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/9imtaF8yVLEym42R6" class="text-slate-800 font-bold text-lg hover:text-blue-600 transition flex items-center justify-between w-full group cursor-pointer">
+                                <span>Jaipur, Rajasthan</span>
+                                <svg class="w-5 h-5 text-blue-500 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                             <span class="text-slate-500 text-sm mt-1">Our central command center managing nationwide operations and compliance.</span>
                         </li>
                         <li class="flex flex-col">
                             <span class="text-blue-600 font-bold text-sm uppercase tracking-wider mb-1">Branch Office</span>
-                            <a href="https://maps.app.goo.gl/ZEu2urvCBZDzFa5Z8" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold text-lg hover:text-blue-600 transition flex items-center gap-2 w-fit">
-                                Gandhidham, Gujarat
-                                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="#map-viewer-section" onclick="updateMap(event, this)" data-title="Gandhidham, Gujarat (Branch Office)" data-embed="https://maps.google.com/maps?q=Gandhidham,+Gujarat&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/ZEu2urvCBZDzFa5Z8" class="text-slate-800 font-bold text-lg hover:text-blue-600 transition flex items-center justify-between w-full group cursor-pointer">
+                                <span>Gandhidham, Gujarat</span>
+                                <svg class="w-5 h-5 text-blue-500 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                             <span class="text-slate-500 text-sm mt-1">Our coastal headquarters coordinating all western port logistics.</span>
                         </li>
@@ -127,46 +127,46 @@
                 <div class="p-6 flex-grow">
                     <p class="text-sm text-slate-500 mb-5">Dedicated presence and daily clearance operations at key dry ports:</p>
                     <ul class="space-y-3">
-                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition">
+                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition group cursor-pointer" onclick="updateMap(event, this.querySelector('a'))">
                             <span class="text-teal-600 mr-3">✔</span>
-                            <a href="https://maps.app.goo.gl/YepAWo15U17A14TT6" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-semibold hover:text-teal-800 flex items-center w-full">
+                            <a href="#map-viewer-section" data-title="ICD Kathuwas" data-embed="https://maps.google.com/maps?q=ICD+Kathuwas,+Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/YepAWo15U17A14TT6" class="text-slate-800 font-semibold group-hover:text-teal-800 flex items-center justify-between w-full">
                                 ICD Kathuwas
-                                <svg class="w-4 h-4 ml-auto text-teal-600 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 text-teal-600 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                         </li>
-                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition">
+                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition group cursor-pointer" onclick="updateMap(event, this.querySelector('a'))">
                             <span class="text-teal-600 mr-3">✔</span>
-                            <a href="https://maps.app.goo.gl/mT6naGtfvpB27pvr6" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-semibold hover:text-teal-800 flex items-center w-full">
+                            <a href="#map-viewer-section" data-title="ICD Kanakpura" data-embed="https://maps.google.com/maps?q=ICD+Kanakpura,+Jaipur&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/mT6naGtfvpB27pvr6" class="text-slate-800 font-semibold group-hover:text-teal-800 flex items-center justify-between w-full">
                                 ICD Kanakpura
-                                <svg class="w-4 h-4 ml-auto text-teal-600 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 text-teal-600 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                         </li>
-                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition">
+                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition group cursor-pointer" onclick="updateMap(event, this.querySelector('a'))">
                             <span class="text-teal-600 mr-3">✔</span>
-                            <a href="https://maps.app.goo.gl/fSune6rEz7EFnhT58" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-semibold hover:text-teal-800 flex items-center w-full">
+                            <a href="#map-viewer-section" data-title="ICD Dhankya" data-embed="https://maps.google.com/maps?q=ICD+Dhankya,+Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/fSune6rEz7EFnhT58" class="text-slate-800 font-semibold group-hover:text-teal-800 flex items-center justify-between w-full">
                                 ICD Dhankya
-                                <svg class="w-4 h-4 ml-auto text-teal-600 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 text-teal-600 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                         </li>
-                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition">
+                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition group cursor-pointer" onclick="updateMap(event, this.querySelector('a'))">
                             <span class="text-teal-600 mr-3">✔</span>
-                            <a href="https://maps.app.goo.gl/NPB4sR4TiGUBMBNE9" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-semibold hover:text-teal-800 flex items-center w-full">
+                            <a href="#map-viewer-section" data-title="ICD Hirnoda" data-embed="https://maps.google.com/maps?q=ICD+Hirnoda,+Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/NPB4sR4TiGUBMBNE9" class="text-slate-800 font-semibold group-hover:text-teal-800 flex items-center justify-between w-full">
                                 ICD Hirnoda
-                                <svg class="w-4 h-4 ml-auto text-teal-600 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 text-teal-600 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                         </li>
-                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition">
+                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition group cursor-pointer" onclick="updateMap(event, this.querySelector('a'))">
                             <span class="text-teal-600 mr-3">✔</span>
-                            <a href="https://maps.app.goo.gl/kYYanb3F3Yh5PZs67" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-semibold hover:text-teal-800 flex items-center w-full">
+                            <a href="#map-viewer-section" data-title="ICD Kishangarh" data-embed="https://maps.google.com/maps?q=ICD+Kishangarh,+Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/kYYanb3F3Yh5PZs67" class="text-slate-800 font-semibold group-hover:text-teal-800 flex items-center justify-between w-full">
                                 ICD Kishangarh
-                                <svg class="w-4 h-4 ml-auto text-teal-600 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <svg class="w-4 h-4 text-teal-600 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                         </li>
-                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition">
+                        <li class="flex items-center bg-teal-50 px-4 py-3 rounded-lg border border-teal-100 hover:bg-teal-100 transition group cursor-pointer" onclick="updateMap(event, this.querySelector('a'))">
                             <span class="text-teal-600 mr-3">✔</span>
-                            <a href="https://maps.app.goo.gl/8bn2cmRQ8MKPaQ2s9" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-semibold hover:text-teal-800 flex items-center w-full">
-                                ICD Haldia
-                                <svg class="w-4 h-4 ml-auto text-teal-600 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="#map-viewer-section" data-title="ICD Haldiya" data-embed="https://maps.google.com/maps?q=Haldia+Port,+West+Bengal&t=&z=13&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/8bn2cmRQ8MKPaQ2s9" class="text-slate-800 font-semibold group-hover:text-teal-800 flex items-center justify-between w-full">
+                                ICD Haldiya
+                                <svg class="w-4 h-4 text-teal-600 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                         </li>
                     </ul>
@@ -185,17 +185,17 @@
                     <ul class="space-y-6">
                         <li class="flex flex-col border-b border-slate-100 pb-4">
                             <span class="text-sky-600 font-bold text-sm uppercase tracking-wider mb-1">Sea Port Presence</span>
-                            <a href="https://maps.app.goo.gl/D4Ya1pzyWehhARcMA" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold text-lg hover:text-sky-600 transition flex items-center gap-2 w-fit">
-                                Mundra Port
-                                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="#map-viewer-section" onclick="updateMap(event, this)" data-title="Mundra Port, Gujarat" data-embed="https://maps.google.com/maps?q=Mundra+Port,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/D4Ya1pzyWehhARcMA" class="text-slate-800 font-bold text-lg hover:text-sky-600 transition flex items-center justify-between w-full group cursor-pointer">
+                                <span>Mundra Port</span>
+                                <svg class="w-5 h-5 text-sky-500 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                             <span class="text-slate-500 text-sm mt-1">Direct presence at India's largest private port for rapid vessel coordination and clearance.</span>
                         </li>
                         <li class="flex flex-col">
                             <span class="text-sky-600 font-bold text-sm uppercase tracking-wider mb-1">Air Cargo Presence</span>
-                            <a href="https://maps.app.goo.gl/ooGGMqmvztrrgb48A" target="_blank" rel="noopener noreferrer" class="text-slate-800 font-bold text-lg hover:text-sky-600 transition flex items-center gap-2 w-fit">
-                                Jaipur Air Cargo Terminal
-                                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="#map-viewer-section" onclick="updateMap(event, this)" data-title="Jaipur Air Cargo Terminal" data-embed="https://maps.google.com/maps?q=Jaipur+International+Airport+Cargo&t=&z=14&ie=UTF8&iwloc=&output=embed" data-link="https://maps.app.goo.gl/ooGGMqmvztrrgb48A" class="text-slate-800 font-bold text-lg hover:text-sky-600 transition flex items-center justify-between w-full group cursor-pointer">
+                                <span>Jaipur Air Cargo</span>
+                                <svg class="w-5 h-5 text-sky-500 opacity-0 group-hover:opacity-100 transition transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                             </a>
                             <span class="text-slate-500 text-sm mt-1">Dedicated team handling time-sensitive international air freight shipments.</span>
                         </li>
@@ -205,6 +205,71 @@
 
         </div>
     </section>
+
+    <!-- DYNAMIC MAP VIEWER SECTION -->
+    <section id="map-viewer-section" class="py-12 px-4 max-w-7xl mx-auto mb-16 flex-grow">
+        <div class="flex flex-col sm:flex-row items-center justify-between mb-6">
+            <h2 class="text-3xl font-bold text-slate-800 flex items-center mb-4 sm:mb-0">
+                <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                Location Viewer
+            </h2>
+            <span id="map-title" class="text-lg font-semibold text-blue-800 bg-blue-100 px-4 py-2 rounded-full border border-blue-200">
+                Jaipur, Rajasthan (Head Office)
+            </span>
+        </div>
+        
+        <!-- The interactive iframe container -->
+        <div id="map-box" class="bg-white p-2 rounded-xl shadow-lg border border-slate-200 transition-all duration-300">
+            <iframe 
+                id="map-iframe"
+                src="https://maps.google.com/maps?q=Jaipur,+Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: 0.5rem;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+        <!-- External Link Button -->
+        <div class="mt-8 text-center">
+            <a id="map-external-link" href="https://maps.app.goo.gl/9imtaF8yVLEym42R6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-8 rounded-md shadow-lg transition duration-300">
+                Open in Google Maps App
+                <svg class="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Map Interaction Logic -->
+    <script>
+        function updateMap(event, element) {
+            // Prevent default anchor jump behavior
+            if(event) {
+                event.preventDefault();
+            }
+            
+            // Extract the location data from the clicked element
+            const embedUrl = element.getAttribute('data-embed');
+            const externalLink = element.getAttribute('data-link');
+            const title = element.getAttribute('data-title');
+            
+            // Update the map viewer components
+            document.getElementById('map-iframe').src = embedUrl;
+            document.getElementById('map-external-link').href = externalLink;
+            document.getElementById('map-title').textContent = title;
+            
+            // Provide a visual "flash" highlight to show it updated
+            const mapBox = document.getElementById('map-box');
+            mapBox.classList.add('ring-4', 'ring-blue-400');
+            setTimeout(() => {
+                mapBox.classList.remove('ring-4', 'ring-blue-400');
+            }, 600);
+
+            // Smoothly scroll the user down to the map viewer
+            document.getElementById('map-viewer-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
 
     <!-- FOOTER -->
     <main-footer></main-footer>
