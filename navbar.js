@@ -135,18 +135,23 @@ const footerTemplate = `
                     <p class="text-sm text-slate-400 mb-6 leading-relaxed">
                         Your trusted Customs House Agent and logistics partner for seamless global trade, regulatory compliance, and end-to-end freight forwarding.
                     </p>
-                    <div class="space-y-3 text-sm text-slate-400">
+                    <div class="space-y-4 text-sm text-slate-400">
+                        <!-- CLICKABLE MAP ADDRESS -->
                         <p class="flex items-start gap-3">
                             <svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> 
-                            <span>16, Queens Road, Vaishali Nagar,<br>Jaipur, Rajasthan 302021</span>
+                            <a href="https://maps.app.goo.gl/9imtaF8yVLEym42R6" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition leading-relaxed inline-block">
+                                16, Queens Road, Vaishali Nagar,<br>Jaipur, Rajasthan 302021
+                            </a>
                         </p>
+                        <!-- CLICKABLE EMAIL (MAILTO) -->
                         <p class="flex items-center gap-3">
                             <svg class="w-5 h-5 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> 
                             <a href="mailto:rgintjaipur@gmail.com" class="hover:text-blue-400 transition">rgintjaipur@gmail.com</a>
                         </p>
+                        <!-- CLICKABLE PHONE (TEL) -->
                         <p class="flex items-center gap-3">
                             <svg class="w-5 h-5 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> 
-                            <span>+91 (141) 235-4577</span>
+                            <a href="tel:+911412354577" class="hover:text-blue-400 transition">+91 (141) 235-4577</a>
                         </p>
                     </div>
                 </div>
